@@ -1,0 +1,6 @@
+instaloader>=4.12
+faster-whisper>=1.0.3
+yt-dlp>=2025.1.26
+python-dotenv>=1.0.1
+openai>=1.61.0
+pytest>=8.3.4

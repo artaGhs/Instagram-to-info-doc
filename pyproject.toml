@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instagram-to-info-doc"
+version = "0.1.0"
+description = "Local pipeline to convert Instagram videos into detailed strategic intelligence docs."
+requires-python = ">=3.10"
+dependencies = [
+  "instaloader>=4.12",
+  "faster-whisper>=1.0.3",
+  "yt-dlp>=2025.1.26",
+  "python-dotenv>=1.0.1",
+  "openai>=1.61.0",
+]
+
+[project.scripts]
+instagram-to-info-doc = "instagram_to_info_doc.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
